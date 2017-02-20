@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+.section { font: 40px "Microsoft Yahei"; color: #fff;}
+#menu { margin: 0; padding: 0; position: fixed; z-index: 70;}
+#menu li { float: right; margin:  0 30px 0 20px; list-style-type:none; font-size: 14px;}
+#menu a { float: right; font-size:20px; padding: 10px 20px; background-color: #fff; color: #7A797E; text-decoration: none;}
+#menu .active a { color: #E74E49;}
+#menu .active { border-bottom:5px #E74E49 solid; }
+
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$(function(){
+
+	$('#dowebok').fullpage({
+		sectionsColor: ['', '#fff', '#EDEDED','#EDEDED','#33363F'],
+		'navigation': true,
+		'resize' : true,
+		anchors: ['page1', 'page2', 'page2-2', 'page3', 'page4'],
+		menu: '#menu',
+	});
+
+	$(window).resize(function(){
+        autoScrolling();
+    });
+
+    function autoScrolling(){
+        var $ww = $(window).width();
+        if($ww < 1000){
+            $.fn.fullpage.setAutoScrolling(false);
+        } else {
+            $.fn.fullpage.setAutoScrolling(true);
+        }
+    }
+
+    autoScrolling();
+});
+</script>
+</head>
+
+<body>
+	<div style="width:100%; background-color:#fff"  id="menu">
+		<div style="float:left; margin: 10px 0px 0px 60px;">
+			<img style="width:112px; height:35px;" src="images/01.png" alt="">
+		</div>
+		<div style="float:right; margin: 10px 70px 0px 0px;">
+			<img src="images/02.png" alt="">
+		</div>
+		<div style="float:right">
+			<ul >
+				<li data-menuanchor="page4"><a href="#page4">关于我们</a></li>
+				<li data-menuanchor="page3"><a href="#page3">爱心社区</a></li>
+				<li data-menuanchor="page2"><a href="#page2">项目介绍</a></li>
+				<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="dowebok">
+
+		<div style="position:relative;" class="section">
+			<div>
+				<img width="100%" height="100%" src="images/003.png" alt="">
+			</div>
+			<div style="height:100%; width:100%; background:black; alpha(opacity=20); opacity:0.2; position:absolute; left:0px;top:0px; z-index:1;"></div>
+			<div style="position:absolute; left:130px;top:180px; z-index:3;">
+				<p style="font-size: 65px;">Time of new life</p>
+				<p style="font: 25px 'SimSun';">新时代，年轻的人们让我们一起</p>
+				<p style="font: 25px 'SimSun';">体验新生活享受新生活</p>
+				<br>
+				<img src="images/004.png" alt="">
+			</div>
+		</div>
+
+
+		<div class="section">
+			<div style=" border-right:2px #B1B1B1 solid" class="col-md-3">
+				<center>
+					<div style="margin:0px 15px;">
+						<img height="70px" width="70px" src="images/task_1_7_1_13.gif" alt="">
+						<br><br>
+						<p style=" font: 25px 'Microsoft Yahei'; color: #8E8E8E;" >打造全新世界观，让你更爱你的生活</p>
+					</div>
+				</center>
+			</div>
+
+			<div style=" border-right:2px #B1B1B1 solid" class="col-md-3">
+				<center>
+					<div style="margin:0px 15px;">
+						<img height="70px" width="70px" src="images/task_1_7_1_15.gif" alt="">
+						<br><br>
+						<p style=" font: 25px 'Microsoft Yahei'; color: #8E8E8E;" >丰富多彩的公益活动，发挥新世界的主人公意识</p>
+					</div>
+				</center>
+			</div>
+
+			<div style=" border-right:2px #B1B1B1 solid" class="col-md-3">
+				<center>
+					<div style="margin:0px 15px;">
+						<img height="70px" width="70px" src="images/task_1_7_1_17.gif" alt="">
+						<br><br>
+						<p style=" font: 25px 'Microsoft Yahei'; color: #8E8E8E;" >时尚的新理念，超前体验未知的生活</p>
+					</div>
+				</center>
+			</div>
+
+			<div class="col-md-3">
+				<center>
+					<div style="margin:0px 15px;">
+						<img height="70px" width="70px" src="images/task_1_7_1_19.gif" alt="">
+						<br><br>
+						<p style=" font: 25px 'Microsoft Yahei'; color: #8E8E8E;" >完善的培养机制，培养你全新的世界观</p>
+					</div>
+				</center>
+			</div>
+		</div>
+
+
+		<div class="section">
+			<center>
+				<img height="10%" width="10%" src="images/task_1_7_1_26.gif" alt="">
+				<br><br>
+				<p style=" font: 65px 'Microsoft Yahei'; color: #A1A1A1;" >关于新世界，你不知道的还有什么？</p>
+			</center>
+		</div>
+
+
+		<div class="section">
+			<div>
+				<img width="100%" height="100%" src="images/005.png" alt="">
+			</div>
+			<div style="height:100%; width:100%; background:#AA3533; alpha(opacity=20); opacity:0.2; position:absolute; left:0px;top:0px; z-index:-1;"></div>
+			<center>
+				<div style="position:absolute; left:32%;top:150px; z-index:3;">
+					<p style="font-size: 65px;">查找新世界城市活动信息</p>
+					<hr width="30%" />
+					<p style="font: 30px 'SimSun';">每个城市有不同信息，请自主查询您所需要了解的城市</p>
+				</div>
+				<div style="position:absolute; left:270px;top:450px; z-index:3;">
+					<select style="background:#fff;color:#bcbcbc;width: 300px;height: 60px;">
+						<option style="background:#E3E3E5;color:#bcbcbc;" value ="volvo">北京</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value ="saab">天津</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value="opel">长沙</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value="audi">株洲</option>
+					</select>
+					<select style="background:#fff;color:#bcbcbc;width: 300px;height: 60px;">
+						<option style="background:#E3E3E5;color:#bcbcbc;" value ="volvo">北京</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value ="saab">天津</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value="opel">长沙</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value="audi">株洲</option>
+					</select>
+					<select style="background:#fff;color:#bcbcbc;width: 300px;height: 60px;">
+						<option style="background:#E3E3E5;color:#bcbcbc;" value ="volvo">北京</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value ="saab">天津</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value="opel">长沙</option>
+						<option style="background:#E3E3E5;color:#bcbcbc;" value="audi">株洲</option>
+					</select>
+					<div style="float:right;background:#BF4E48;color:#fff;width: 300px;height: 60px;">
+						搜索
+					</div>
+					<div style="float:right; width:30px;"></div>
+				</div>
+			</center>
+		</div>
+
+
+		<div class="section">
+			<center>
+				<p style="fort-size:200px">联系我们</p>
+				<br><br>
+		        <input sryle"border:0; padding:0;width:250px;heigth:50px;" type="text">
+		        <button style="background:#717179; color:#fff; height:58px; width:200px;" type="button">提  交</button>
+			</center>
+		</div>
+	</div>
+</body>
+</html>
